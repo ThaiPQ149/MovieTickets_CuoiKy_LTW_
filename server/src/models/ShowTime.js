@@ -19,13 +19,22 @@ const showtimeSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    price: {
+    normalPrice: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
+    },
+    vipPrice: {
+        type: Number,
+        required: true,
+        min: 0
     }
 }, {
     timestamps: true
 });
+
+showtimeSchema.index({ roomId: 1, startTime: 1, endTime: 1 });
+showtimeSchema.index({ movieId: 1, startTime: 1 });
 
 const Showtime = mongoose.model("Showtime", showtimeSchema);
 

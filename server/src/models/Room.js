@@ -3,25 +3,25 @@ import mongoose from "mongoose";
 const roomSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        trim: true
     },
     totalRows: {
         type: Number,
-        required: true
+        required: true,
+        min: 1,
+        max: 26
     },
     seatsPerRow: {
         type: Number,
-        required: true
+        required: true,
+        min: 1
     },
-    seatConfiguration: [{
-        row: String,
-        number: Number,
-        type: {
-            type: String,
-            enum: ["normal", "vip"],
-            default: "normal"
-        }
-    }]
+    vipRows: {
+        type: [String],
+        default: []
+    }
 }, {
     timestamps: true
 });
