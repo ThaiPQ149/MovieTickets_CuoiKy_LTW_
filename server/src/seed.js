@@ -30,8 +30,8 @@ const seed = async () => {
     const movies = await Movie.create([
         { title: "Hành Tinh Cuối Cùng", genre: ["Khoa học viễn tưởng", "Phiêu lưu"], duration: 120, status: "now_showing", releaseDate: new Date("2026-10-01"), description: "Phim mẫu 1", poster: "", trailer: "" },
         { title: "Mùa Hè Năm Ấy", genre: ["Tình cảm", "Chính kịch"], duration: 105, status: "now_showing", releaseDate: new Date("2026-10-15"), description: "Phim mẫu 2", poster: "", trailer: "" },
-        { title: "Đêm Không Ngủ", genre: ["Kinh dị"], duration: 95, status: "now_showing", releaseDate: new Date("2026-11-01"), description: "Phim mẫu 3", poster: "", trailer: "" },
-        { title: "Siêu Nhân Nhí", genre: ["Hoạt hình", "Gia đình"], duration: 90, status: "coming_soon", releaseDate: new Date("2026-12-20"), description: "Phim mẫu 4", poster: "", trailer: "" }
+        { title: "Đừng Bỏ Em Một Mình", genre: ["Kinh dị"], duration: 95, status: "now_showing", releaseDate: new Date("2026-11-01"), description: "Phim mẫu 3", poster: "", trailer: "" },
+        { title: "Siêu Nhân", genre: ["Hoạt hình", "Gia đình"], duration: 90, status: "coming_soon", releaseDate: new Date("2026-12-20"), description: "Phim mẫu 4", poster: "", trailer: "" }
     ]);
 
     const rooms = await Room.create([

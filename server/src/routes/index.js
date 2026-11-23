@@ -4,6 +4,7 @@ import movieRoutes from "./movieRoutes.js";
 import roomRoutes from "./roomRoutes.js";
 import showtimeRoutes from "./showtimeRoutes.js";
 import bookingRoutes from "./bookingRoutes.js";
+import statsRoutes from "./statsRoutes.js";
 
 const router = express.Router();
 
@@ -18,5 +19,6 @@ router.use("/movies", movieRoutes);
 router.use("/rooms", roomRoutes);
 router.use("/showtimes", showtimeRoutes);
 router.use("/bookings", bookingRoutes);
+router.use("/stats", statsRoutes);
 
 export default router;
